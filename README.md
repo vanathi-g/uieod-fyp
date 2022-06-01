@@ -18,7 +18,17 @@ URL: https://github.com/chongweiliu/DUO
 
 ## Software and Hardware Requirements
 
+For software we will require python3 with the following libraries installed:
 
+* keras
+* numpy
+* Python Imaging Library (PIL)
+* glob
+
+* darknet
+* 
 
 ## Instructions to execute code
 
+* SRGAN
+** stuff
