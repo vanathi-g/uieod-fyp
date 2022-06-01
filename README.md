@@ -28,6 +28,8 @@ For software we will require python3 with the following libraries installed:
 * darknet
 * continue for yolo
 
+We will also need a computer with a GPU installed that is capable of running python3.
+
 ## Instructions to execute code
 
 ### SRGAN execution
