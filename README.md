@@ -24,11 +24,16 @@ For software we will require python3 with the following libraries installed:
 * numpy
 * Python Imaging Library (PIL)
 * glob
-
+* continue for srgan
 * darknet
-* 
+* continue for yolo
 
 ## Instructions to execute code
 
-* SRGAN
-** stuff
+### SRGAN execution
+
+* stuff
+
+## YOLOv3 execution
+
+* stuff
