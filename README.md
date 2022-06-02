@@ -18,23 +18,34 @@ URL: https://github.com/chongweiliu/DUO
 
 ## Software and Hardware Requirements
 
-For software we will require python3 with the following libraries installed:
+Software: Python3 with the following libraries installed:
 
+* tensorflow
 * keras
+* scipy
 * numpy
 * Python Imaging Library (PIL)
+* matplotlib
 * glob
-* continue for srgan
 * darknet
 * continue for yolo
 
-We will also need a computer with a GPU installed that is capable of running python3.
+Hardware (recommended): 12GB RAM, Nvidia Tesla T4 GPU, Intel Xeon CPU @ 2.30GHz (Google Colab free tier specs)
 
 ## Instructions to execute code
 
-### SRGAN execution
+### SRGAN Training and Testing
 
-* stuff
+1. Ensure the UIEB dataset folders are available (either host on Github or upload zip file to drive and unzip as required). The required folders are already avilable [here](https://github.com/vanathi-g/fyp-datasets.git).
+2. Download and prepare to run SRGAN_code.ipynb (found in SRGAN folder) either in Jupyter notebook or Google Colab (recommended). 
+3. Install required libraries specified in the first cell of the notebook.
+4. Authorize Google drive access to ensure model checkpoints are taken properly. 
+5. Follow instructions in the notebook to set appropriate file and folder paths to dataset and model chekpoint folders.
+6. Specify a file to save loss values and FID scores to. This will be used to plot losses later. 
+7. For training, configure parameters such as starting epoch, loss step, checkpoint step and so on. The weights file to continue training from is also configurable.
+8. For testing, the generator trained in step 7 can be used or a saved model may be loaded as well. 
+9. Follow instructions in the notebook to configure how to calculate FID over a batch of images.
+10. To test images from the UIEB "challenging" set, ensure the path to the dataset is correct and run the last cell.
 
 ### YOLOv3 execution
 
