@@ -47,6 +47,34 @@ Hardware (recommended): 12GB RAM, Nvidia Tesla T4 GPU, Intel Xeon CPU @ 2.30GHz 
 9. Follow instructions in the notebook to configure how to calculate FID over a batch of images.
 10. To test images from the UIEB "challenging" set, ensure the path to the dataset is correct and run the last cell.
 
-### YOLOv3 execution
+### YOLOv3 Training
 
-* stuff
+1. Download the DUO dataset to your local device.
+2. Copy train_sizes.txt, convert_train.py, and delete_extra.py to DUO/images/train.
+3. Copy instances_train.json from DUO/annotations to DUO/images/train.
+4. Run convert_train.py followed by delete_extra_train.py.
+5. Remove train_sizes.txt, convert_train.py, instances_train.json and delete_extra_train.py.
+6. Zip the contents of DUO/images/train into yolo_train.zip.
+7. Download and prepare to run YOLOv3_DUO_train.ipynb (found in YOLOv3 folder) either in Jupyter notebook or Google Colab (recommended).
+8. Install required libraries specified in the first cell of the notebook.
+9. Authorize Google drive access to ensure model checkpoints are taken properly. 
+10. Follow instructions in the notebook to set appropriate file and folder paths to dataset and model chekpoint folders.
+11. For training, configure parameters such as batches, number of epochs, number of classes, etc.
+12. Upload yolo_train.zip and unzip it.
+13. Get the initial Darknet53 weights at begin training.
+14. The weights will be stored in the backup location in drive specified.
+
+### YOLOv3 Testing
+
+1. Download the DUO dataset to your local device.
+2. Copy test_sizes.txt, convert_test.py, and delete_extra_test.py to DUO/images/test.
+3. Copy instances_test.json from DUO/annotations to DUO/images/test.
+4. Run convert_test.py followed by delete_extra_test.py.
+5. Remove test_sizes.txt, convert_test.py, instances_test.json and delete_extra_test.py.
+6. Zip the contents of DUO/images/test into yolo_test.zip.
+7. Download and prepare to run YOLOv3_test.ipynb (found in YOLOv3 folder) either in Jupyter notebook or Google Colab (recommended).
+8. Install required libraries specified in the first cell of the notebook.
+9. Authorize Google drive access to ensure model checkpoints are taken properly. 
+10. Follow instructions in the notebook to set appropriate file and folder paths to dataset and model chekpoint folders.
+12. Upload yolo_test.zip and unzip it.
+14. Select an input image and the weights you want to test with from the backup location in drive and run the tests.
